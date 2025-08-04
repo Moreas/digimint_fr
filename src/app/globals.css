@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ffc04b;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+body {
+  @apply antialiased;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Light mode styles */
+body {
+  @apply bg-white text-black transition-colors;
+}
+
+/* Dark mode styles */
+body.dark {
+  @apply bg-black text-white;
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary text-black hover:bg-primary/90 transition-colors;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-black transition-colors;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-black rounded-xl shadow-lg p-6 transition-all;
+}
+
+/* Section styles */
+.section {
+  @apply py-16 md:py-24;
+}
+
+/* Container styles */
+.container-custom {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Font weights */
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
