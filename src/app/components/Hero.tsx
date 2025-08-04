@@ -28,48 +28,48 @@ export default function Hero() {
 
   const services = [
     {
-      title: "Web Development",
-      description: "Custom, responsive websites built with modern technologies and SEO best practices. From landing pages to full e-commerce solutions.",
+      title: "AI Development",
+      description: "Custom AI solutions and integrations built with cutting-edge technologies. From chatbots to machine learning models tailored to your business needs.",
       icon: Globe
     },
     {
-      title: "SEO Services",
-      description: "Comprehensive search engine optimization to improve rankings and drive organic traffic. Technical SEO, content optimization, and link building.",
+      title: "Machine Learning",
+      description: "Custom machine learning models for prediction and pattern recognition. Transform your data into actionable insights and competitive advantages.",
       icon: Search
     },
     {
-      title: "Digital Advertising",
-      description: "Strategic PPC campaigns across Google, Meta, and LinkedIn. Data-driven approach for maximum ROI and lead generation.",
+      title: "Predictive Analytics",
+      description: "AI-driven data analysis and forecasting for business intelligence. Make data-driven decisions with advanced predictive modeling.",
       icon: BarChart3
     },
     {
-      title: "Social Media Marketing",
-      description: "Build and engage your audience across all major platforms. Content creation, community management, and paid social campaigns.",
+      title: "Natural Language Processing",
+      description: "Advanced NLP solutions for text analysis and understanding. From sentiment analysis to automated communication systems.",
       icon: Share2
     },
     {
-      title: "Content Marketing",
-      description: "Strategic content creation that drives conversions. Blog posts, whitepapers, case studies, and video content that tells your story.",
+      title: "AI Content Generation",
+      description: "Advanced content creation using state-of-the-art AI models. Generate engaging content at scale while maintaining quality and brand voice.",
       icon: FileEdit
     },
     {
-      title: "Email Marketing",
-      description: "Automated email campaigns that nurture leads and boost retention. Personalized sequences, newsletters, and drip campaigns.",
+      title: "AI Automation",
+      description: "Streamline your business processes with intelligent automation. From workflow optimization to smart task management.",
       icon: Mail
     },
     {
-      title: "Analytics & Reporting",
-      description: "In-depth tracking and analysis of all marketing efforts. Custom dashboards and regular reports to measure ROI and optimize performance.",
+      title: "Computer Vision",
+      description: "Advanced image and video processing solutions. From object detection to visual search and automated quality control.",
       icon: LineChart
     },
     {
-      title: "Brand Strategy",
-      description: "Develop a strong brand identity and messaging that resonates with your target audience. Visual design, tone of voice, and brand guidelines.",
+      title: "AI Strategy",
+      description: "Expert guidance on AI implementation and digital transformation. Develop a roadmap for integrating AI into your business operations.",
       icon: Palette
     },
     {
-      title: "Local SEO",
-      description: "Dominate local search results and attract nearby customers. Google Business Profile optimization, local citations, and review management.",
+      title: "AI-Powered Analytics",
+      description: "Transform your data into actionable insights with AI. Real-time analysis, pattern recognition, and automated reporting.",
       icon: MapPin
     }
   ];
@@ -116,11 +116,11 @@ export default function Hero() {
               drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] 
               [text-shadow:2px_2px_8px_rgba(0,0,0,0.3)]
               dark:[text-shadow:0_0_10px_rgba(255,255,255,0.3),0_0_20px_rgba(255,255,255,0.2),0_0_30px_rgba(255,255,255,0.1)]">
-              Comprehensive Digital Marketing<br />
+              Advanced Artificial Intelligence<br />
               Solutions
             </h1>
             <div className="text-xl md:text-2xl font-medium text-black dark:text-white max-w-3xl mx-auto">
-              Everything you need to succeed in the digital landscape. Our services are tailored to your business goals and target audience.
+              Transform your business with cutting-edge AI solutions. Our advanced technologies and expertise help you innovate and stay ahead of the competition.
             </div>
           </div>
         </div>

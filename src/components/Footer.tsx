@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Github, Twitter, FileCode, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { useTheme } from '@/contexts/ThemeContext';
 
 const navigation = {
@@ -13,20 +13,20 @@ const navigation = {
     { name: 'Contact', href: '/contact' }
   ],
   services: [
-    { name: 'Web Development', href: '/services#web-development' },
-    { name: 'Digital Marketing', href: '/services#digital-marketing' },
-    { name: 'SEO Services', href: '/services#seo' },
-    { name: 'Content Marketing', href: '/services#content' },
-    { name: 'Social Media', href: '/services#social' }
+    { name: 'AI Development', href: '/services#ai-development' },
+    { name: 'Machine Learning', href: '/services#machine-learning' },
+    { name: 'Computer Vision', href: '/services#computer-vision' },
+    { name: 'Natural Language Processing', href: '/services#nlp' },
+    { name: 'AI Automation', href: '/services#ai-automation' }
   ],
   social: [
-    { name: 'Facebook', href: '#', icon: Facebook },
+    { name: 'GitHub', href: '#', icon: Github },
     { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'Dev Blog', href: '#', icon: FileCode },
     { name: 'LinkedIn', href: '#', icon: Linkedin }
   ],
   contact: [
-    { icon: Mail, text: 'info@digimint.com' },
+    { icon: Mail, text: 'ai@digimint.com' },
     { icon: Phone, text: '+1 (555) 123-4567' },
     { icon: MapPin, text: '123 Digital Street, Tech City' }
   ]
@@ -43,9 +43,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About Digimint</h3>
+            <h3 className="text-lg font-semibold mb-4">About Digimint AI</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We help businesses grow through innovative digital marketing solutions and data-driven strategies.
+              We help businesses transform through cutting-edge artificial intelligence solutions and data science expertise.
             </p>
             <div className="flex space-x-4">
               {navigation.social.map((item) => {
@@ -117,7 +117,7 @@ export default function Footer() {
 
         <div className="mt-16 border-t border-gray-900/10 dark:border-white/10 pt-8">
           <p className="text-center text-sm leading-5 text-gray-600 dark:text-gray-300">
-            &copy; {new Date().getFullYear()} Digimint. All rights reserved.
+            &copy; {new Date().getFullYear()} Digimint AI. All rights reserved.
           </p>
         </div>
       </div>

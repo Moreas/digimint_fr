@@ -3,19 +3,19 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      content: "Digimint transformed our online presence. Their SEO and content strategy doubled our organic traffic in just 3 months.",
-      author: "Sarah Johnson",
-      role: "CEO at TechStart Solutions"
+      content: "Digimint AI's machine learning solutions revolutionized our data analysis. Their predictive models have improved our decision-making accuracy by 85% and significantly reduced operational costs.",
+      author: "Dr. Sarah Chen",
+      role: "CTO at DataTech Innovations"
     },
     {
-      content: "The PPC campaigns they run consistently deliver a 300% ROI. Their data-driven approach and constant optimization make all the difference.",
-      author: "Michael Chen",
-      role: "Marketing Director at GrowthMax"
+      content: "The AI-powered automation system they implemented has transformed our customer service. We've seen a 60% reduction in response times and a 40% increase in customer satisfaction.",
+      author: "Michael Rodriguez",
+      role: "Head of Operations at ServiceNow Global"
     },
     {
-      content: "Working with Digimint has been a game-changer. Their social media management has helped us build a loyal community and drive real business results.",
-      author: "Emma Davis",
-      role: "Founder at Lifestyle Brands Co"
+      content: "Their computer vision solution for quality control has been transformative. We've reduced defects by 95% and increased production efficiency by 40%. The ROI has been exceptional.",
+      author: "Emma Patel",
+      role: "Director of Manufacturing at InnovateX"
     }
   ];
 

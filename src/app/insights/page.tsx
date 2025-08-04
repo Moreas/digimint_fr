@@ -4,58 +4,58 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Insights - Digital Marketing Tips & Trends | Digimint',
-  description: 'Stay updated with the latest digital marketing trends, tips, and strategies. Expert insights from the Digimint team to help grow your business online.',
+  title: 'Insights - AI Technology & Innovation | Digimint AI',
+  description: 'Stay updated with the latest artificial intelligence trends, innovations, and implementations. Expert insights from the Digimint AI team to help transform your business.',
 };
 
 const articles = [
   {
-    title: "The Future of SEO: AI and Machine Learning Impact",
-    description: "Explore how artificial intelligence and machine learning are reshaping SEO strategies and what it means for your business.",
-    category: "SEO",
+    title: "The Future of AI: Transformative Trends for 2024",
+    description: "Explore the cutting-edge developments in artificial intelligence and how they're reshaping industries across the globe.",
+    category: "AI Trends",
     date: "March 15, 2024",
     readTime: "8 min read",
-    image: "/images/blog/seo-future.jpg"
+    image: "/images/blog/ai-future.jpg"
   },
   {
-    title: "Maximizing ROI with Data-Driven PPC Campaigns",
-    description: "Learn how to leverage data analytics to optimize your PPC campaigns and achieve better returns on your advertising investment.",
-    category: "Digital Advertising",
+    title: "Deep Learning vs Machine Learning: A Comprehensive Guide",
+    description: "Understanding the key differences between deep learning and traditional machine learning, and when to use each approach.",
+    category: "Machine Learning",
     date: "March 12, 2024",
-    readTime: "6 min read",
-    image: "/images/blog/ppc-roi.jpg"
+    readTime: "10 min read",
+    image: "/images/blog/deep-learning.jpg"
   },
   {
-    title: "Social Media Trends That Will Dominate 2024",
-    description: "Stay ahead of the curve with our comprehensive guide to the most important social media marketing trends for 2024.",
-    category: "Social Media",
+    title: "Implementing Computer Vision in Manufacturing",
+    description: "A practical guide to implementing computer vision solutions for quality control and process optimization in manufacturing.",
+    category: "Computer Vision",
     date: "March 10, 2024",
     readTime: "7 min read",
-    image: "/images/blog/social-trends.jpg"
+    image: "/images/blog/computer-vision.jpg"
   },
   {
-    title: "Content Marketing Strategies for B2B Companies",
-    description: "Discover effective content marketing strategies specifically tailored for B2B businesses to generate leads and build authority.",
-    category: "Content Marketing",
+    title: "Natural Language Processing: Beyond Chatbots",
+    description: "Exploring advanced NLP applications in business intelligence, sentiment analysis, and automated documentation.",
+    category: "NLP",
     date: "March 8, 2024",
     readTime: "9 min read",
-    image: "/images/blog/b2b-content.jpg"
+    image: "/images/blog/nlp.jpg"
   },
   {
-    title: "Email Marketing Automation Best Practices",
-    description: "Master the art of email automation with these proven strategies to nurture leads and boost conversions.",
-    category: "Email Marketing",
+    title: "AI-Driven Process Automation Success Stories",
+    description: "Real-world case studies of successful AI implementation in business process automation across different industries.",
+    category: "AI Automation",
     date: "March 5, 2024",
-    readTime: "5 min read",
-    image: "/images/blog/email-automation.jpg"
+    readTime: "6 min read",
+    image: "/images/blog/automation.jpg"
   },
   {
-    title: "Local SEO: A Complete Guide for Small Businesses",
-    description: "Everything you need to know about optimizing your local SEO to attract more customers from your area.",
-    category: "Local SEO",
+    title: "Ethical AI Development: Best Practices Guide",
+    description: "Essential guidelines for developing and implementing AI solutions that are both powerful and ethically responsible.",
+    category: "AI Ethics",
     date: "March 3, 2024",
-    readTime: "10 min read",
-    image: "/images/blog/local-seo.jpg"
+    readTime: "11 min read",
+    image: "/images/blog/ai-ethics.jpg"
   }
 ];
 
@@ -66,10 +66,10 @@ export default function InsightsPage() {
       <section className="relative py-20 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl mb-6">
-            Digital Marketing Insights
+            AI Technology Insights
           </h1>
           <p className="text-lg leading-8 text-gray-800 dark:text-gray-200 max-w-3xl mx-auto">
-            Expert insights, tips, and strategies to help you succeed in the digital landscape.
+            Expert insights, technical guides, and implementation strategies to help you succeed with artificial intelligence.
           </p>
         </div>
       </section>
@@ -129,7 +129,7 @@ export default function InsightsPage() {
               Subscribe to Our Newsletter
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Get the latest digital marketing insights and tips delivered straight to your inbox.
+              Get the latest AI technology insights and implementation guides delivered straight to your inbox.
             </p>
             <form className="flex gap-4">
               <input

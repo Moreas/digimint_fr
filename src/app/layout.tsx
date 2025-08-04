@@ -15,8 +15,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: 'Digimint - Digital Marketing Agency',
-  description: 'Professional digital marketing services including SEO, social media marketing, content creation, and web development.',
+  title: 'Digimint AI - AI-Powered Digital Marketing Agency',
+  description: 'Professional AI-powered digital marketing services including SEO, social media marketing, content creation, and web development.',
   metadataBase: new URL('https://digimint.com'),
 };
 

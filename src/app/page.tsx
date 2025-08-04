@@ -5,11 +5,11 @@ import CTA from './components/CTA';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Digimint - Digital Marketing Agency',
-  description: 'Transform your digital presence with expert marketing services. SEO, PPC, Social Media, Content Marketing, and Web Development solutions tailored for your business.',
+  title: 'Digimint AI - Artificial Intelligence Solutions',
+  description: 'Transform your business with cutting-edge AI solutions. Machine Learning, Natural Language Processing, Computer Vision, and AI Development services tailored for your needs.',
   openGraph: {
-    title: 'Digimint - Digital Marketing Agency',
-    description: 'Transform your digital presence with expert marketing services.',
+    title: 'Digimint AI - Artificial Intelligence Solutions',
+    description: 'Transform your business with cutting-edge AI solutions.',
     images: ['/images/og-image.jpg'],
   },
 };

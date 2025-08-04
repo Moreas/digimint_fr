@@ -2,8 +2,8 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Digimint',
-    description: 'Professional digital marketing services including SEO, social media marketing, content creation, and web development.',
+    name: 'Digimint AI',
+    description: 'Professional AI-powered digital marketing services including SEO, social media marketing, content creation, and web development.',
     url: 'https://digimint.com',
     logo: 'https://digimint.com/logo_dark.png',
     sameAs: [

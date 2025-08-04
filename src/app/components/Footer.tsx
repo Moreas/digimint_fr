@@ -6,10 +6,11 @@ import Logo from '@/components/Logo';
 export default function Footer() {
   const navigation = {
     services: [
-      { name: 'Digital Marketing', href: '/services/digital-marketing' },
-      { name: 'SEO', href: '/services/seo' },
-      { name: 'Social Media', href: '/services/social-media' },
-      { name: 'Content Marketing', href: '/services/content-marketing' },
+      { name: 'AI Development', href: '/services/ai-development' },
+      { name: 'Machine Learning', href: '/services/machine-learning' },
+      { name: 'Computer Vision', href: '/services/computer-vision' },
+      { name: 'Natural Language Processing', href: '/services/nlp' },
+      { name: 'AI Automation', href: '/services/ai-automation' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -20,8 +21,8 @@ export default function Footer() {
     connect: [
       { name: 'LinkedIn', href: '#' },
       { name: 'Twitter', href: '#' },
-      { name: 'Instagram', href: '#' },
-      { name: 'Facebook', href: '#' },
+      { name: 'GitHub', href: '#' },
+      { name: 'Medium', href: '#' },
     ],
   };
 
@@ -35,7 +36,7 @@ export default function Footer() {
           <div className="space-y-8">
             <Logo className="h-12 w-auto" />
             <p className="text-sm leading-6 text-black/70 dark:text-white/70">
-              Transforming businesses through innovative digital marketing solutions.
+              Transforming businesses through cutting-edge artificial intelligence solutions.
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -81,7 +82,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-black/10 dark:border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-black/70 dark:text-white/70">
-            &copy; {new Date().getFullYear()} Digimint. All rights reserved.
+            &copy; {new Date().getFullYear()} Digimint AI. All rights reserved.
           </p>
         </div>
       </div>

@@ -4,64 +4,64 @@ import { Metadata } from 'next';
 import { Globe, Code, Search, LineChart, Share2, FileText, PieChart, Target, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Our Services - Digimint Digital Marketing Agency',
-  description: 'Comprehensive digital marketing services including web development, SEO, social media marketing, and more. Transform your online presence with Digimint.',
+  title: 'Our Services - Digimint AI Solutions',
+  description: 'Comprehensive AI solutions including machine learning, natural language processing, computer vision, and more. Transform your business with AI-powered innovation.',
 };
 
 const services = [
   {
     icon: Code,
-    title: 'Web Development',
-    description: 'Custom, responsive websites built with modern technologies and SEO best practices. From landing pages to full e-commerce solutions.',
-    slug: 'web-development'
+    title: 'AI Development',
+    description: 'Custom AI solutions and integrations built with cutting-edge technologies. From chatbots to machine learning models tailored to your business needs.',
+    slug: 'ai-development'
   },
   {
     icon: Search,
-    title: 'SEO Services',
-    description: 'Comprehensive search engine optimization to improve rankings and drive organic traffic. Technical SEO, content optimization, and link building.',
-    slug: 'seo-services'
+    title: 'AI-Powered SEO',
+    description: 'Advanced search engine optimization using AI for content analysis, keyword research, and competitive intelligence to drive organic traffic.',
+    slug: 'ai-seo'
   },
   {
     icon: LineChart,
-    title: 'Digital Advertising',
-    description: 'Strategic PPC campaigns across Google, Meta, and LinkedIn. Data-driven approach for maximum ROI and lead generation.',
-    slug: 'digital-advertising'
+    title: 'Predictive Analytics',
+    description: 'AI-driven data analysis and forecasting for business intelligence. Transform your data into actionable insights and strategic advantages.',
+    slug: 'predictive-analytics'
   },
   {
     icon: Share2,
-    title: 'Social Media Marketing',
-    description: 'Build and engage your platform audience. Content creation, community management, and paid social campaigns.',
-    slug: 'social-media-marketing'
+    title: 'AI Content Generation',
+    description: 'Advanced content creation using AI models. Generate engaging blog posts, social media content, and marketing copy at scale.',
+    slug: 'ai-content'
   },
   {
     icon: FileText,
-    title: 'Content Marketing',
-    description: 'Strategic content that drives traffic and delivers value. Blog posts, whitepapers, case studies, and video content that tells your story.',
-    slug: 'content-marketing'
+    title: 'Natural Language Processing',
+    description: 'Leverage NLP technology for automated customer service, sentiment analysis, and text processing solutions.',
+    slug: 'nlp-services'
   },
   {
     icon: Globe,
-    title: 'Email Marketing',
-    description: 'Automated email campaigns to nurture leads and boost retention. Personalized sequences, newsletters, and drip campaigns.',
-    slug: 'email-marketing'
+    title: 'AI Automation',
+    description: 'Streamline your business processes with AI automation. From workflow optimization to intelligent task management.',
+    slug: 'ai-automation'
   },
   {
     icon: PieChart,
-    title: 'Analytics & Reporting',
-    description: 'In-depth tracking and analysis of all marketing efforts. Custom dashboards and regular reports to measure ROI and optimize performance.',
-    slug: 'analytics-reporting'
+    title: 'Machine Learning Solutions',
+    description: 'Custom machine learning models for prediction, classification, and pattern recognition. Turn your data into competitive advantages.',
+    slug: 'machine-learning'
   },
   {
     icon: Target,
-    title: 'Brand Strategy',
-    description: 'Develop a strong brand identity and messaging that resonates with your target audience. Visual design, tone of voice, and brand guidelines.',
-    slug: 'brand-strategy'
+    title: 'AI Strategy Consulting',
+    description: 'Expert guidance on AI implementation and digital transformation. Develop a roadmap for integrating AI into your business operations.',
+    slug: 'ai-strategy'
   },
   {
     icon: MapPin,
-    title: 'Local SEO',
-    description: 'Dominate local search results and attract nearby customers. Google Business Profile optimization, local citations, and review management.',
-    slug: 'local-seo'
+    title: 'Computer Vision',
+    description: 'Advanced image and video processing solutions. From object detection to visual search and automated quality control.',
+    slug: 'computer-vision'
   },
 ];
 
@@ -75,8 +75,8 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-lg leading-8 text-gray-800 dark:text-gray-200 max-w-3xl mx-auto">
-            Comprehensive digital marketing solutions tailored to your business goals.
-            We combine strategy, creativity, and technology to deliver measurable results.
+            Cutting-edge AI solutions tailored to transform your business operations.
+            We combine advanced algorithms, data science, and innovation to deliver powerful results.
           </p>
         </div>
       </section>
@@ -121,11 +121,11 @@ export default function ServicesPage() {
       <section className="py-16 px-6 lg:px-8 bg-[#0D0D0D]">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-            Ready to Transform Your Digital Presence?
+            Ready to Transform Your Business with AI?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Get in touch for a free consultation and discover how our digital marketing expertise
-            can help you achieve your business goals.
+            Get in touch for a free consultation and discover how our AI expertise
+            can help revolutionize your business operations and drive innovation.
           </p>
           <div className="flex justify-center gap-4">
             <a

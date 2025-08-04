@@ -34,7 +34,7 @@ export default function Logo({ className = '' }: LogoProps) {
     <div className={`block ${className}`}>
       <Image
         src={`/${logoFileName}`}
-        alt="Digimint"
+        alt="Digimint AI"
         width={240}
         height={80}
         className="h-full w-auto"
@@ -43,7 +43,7 @@ export default function Logo({ className = '' }: LogoProps) {
           console.error(`Failed to load logo: /${logoFileName}`);
           e.currentTarget.style.display = 'none';
           e.currentTarget.parentElement?.classList.add('text-2xl', 'font-bold', fallbackTextColor);
-          e.currentTarget.parentElement!.textContent = 'Digimint';
+          e.currentTarget.parentElement!.textContent = 'Digimint AI';
         }}
       />
     </div>

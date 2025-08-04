@@ -7,126 +7,126 @@ import { ArrowUpRight, BarChart2, Users, Globe, Search } from 'lucide-react';
 
 const categories = [
   'All',
-  'Web Development',
-  'Digital Marketing',
-  'SEO',
-  'Social Media',
-  'Content Marketing'
+  'Machine Learning',
+  'Computer Vision',
+  'NLP',
+  'AI Automation',
+  'Predictive Analytics'
 ];
 
 const projects = [
   {
     id: 1,
-    title: 'E-commerce Growth Strategy',
-    category: 'Digital Marketing',
-    description: 'Complete digital transformation and marketing strategy for a leading fashion retailer.',
-    image: '/images/portfolio/ecommerce.jpg',
+    title: 'Predictive Maintenance AI',
+    category: 'Machine Learning',
+    description: 'Advanced machine learning system for predictive maintenance in manufacturing equipment.',
+    image: '/images/portfolio/predictive.jpg',
     results: [
-      '156% increase in online sales',
-      '89% improvement in conversion rate',
-      '234% growth in organic traffic'
+      '85% reduction in equipment downtime',
+      '92% accuracy in failure prediction',
+      '40% decrease in maintenance costs'
     ],
-    services: ['SEO', 'PPC', 'Social Media Marketing'],
-    client: 'Fashion Retailer',
-    link: '/portfolio/ecommerce-growth'
+    services: ['Machine Learning', 'IoT Integration', 'Real-time Analytics'],
+    client: 'Global Manufacturing Corp',
+    link: '/portfolio/predictive-maintenance'
   },
   {
     id: 2,
-    title: 'B2B Lead Generation Campaign',
-    category: 'Digital Marketing',
-    description: 'Comprehensive B2B marketing campaign for a software solutions provider.',
-    image: '/images/portfolio/b2b.jpg',
+    title: 'Computer Vision Quality Control',
+    category: 'Computer Vision',
+    description: 'Automated quality inspection system using computer vision and deep learning.',
+    image: '/images/portfolio/vision.jpg',
     results: [
-      '312% increase in qualified leads',
-      '67% reduction in cost per acquisition',
-      '189% increase in conversion rate'
+      '99.8% defect detection accuracy',
+      '75% reduction in inspection time',
+      '60% cost savings in QA process'
     ],
-    services: ['Content Marketing', 'LinkedIn Advertising', 'Email Marketing'],
-    client: 'Tech Solutions Provider',
-    link: '/portfolio/b2b-leads'
+    services: ['Computer Vision', 'Deep Learning', 'Automated Inspection'],
+    client: 'Automotive Manufacturer',
+    link: '/portfolio/quality-control'
   },
   {
     id: 3,
-    title: 'Local Business SEO Success',
-    category: 'SEO',
-    description: 'Local SEO strategy that dominated regional search results for a restaurant chain.',
-    image: '/images/portfolio/local-seo.jpg',
+    title: 'Intelligent Customer Service',
+    category: 'NLP',
+    description: 'Advanced NLP system for automated customer support and inquiry handling.',
+    image: '/images/portfolio/nlp.jpg',
     results: [
-      '400% increase in local search visibility',
-      '245% more website bookings',
-      '167% increase in foot traffic'
+      '85% reduction in response time',
+      '90% customer satisfaction rate',
+      '65% decrease in support costs'
     ],
-    services: ['Local SEO', 'Google Business Profile', 'Website Optimization'],
-    client: 'Restaurant Chain',
-    link: '/portfolio/local-seo'
+    services: ['Natural Language Processing', 'Chatbot Development', 'Sentiment Analysis'],
+    client: 'Global Retail Chain',
+    link: '/portfolio/customer-service'
   },
   {
     id: 4,
-    title: 'E-commerce Website Redesign',
-    category: 'Web Development',
-    description: 'Complete website redesign and optimization for an online electronics store.',
-    image: '/images/portfolio/website.jpg',
+    title: 'AI Process Automation',
+    category: 'AI Automation',
+    description: 'End-to-end automation of complex business processes using AI and machine learning.',
+    image: '/images/portfolio/automation.jpg',
     results: [
-      '89% faster page load time',
-      '156% increase in mobile conversions',
-      '234% reduction in bounce rate'
+      '80% reduction in processing time',
+      '95% accuracy in automated tasks',
+      '70% cost reduction in operations'
     ],
-    services: ['Web Design', 'UX Optimization', 'Performance Optimization'],
-    client: 'Electronics Retailer',
-    link: '/portfolio/website-redesign'
+    services: ['Process Automation', 'Machine Learning', 'Workflow Optimization'],
+    client: 'Financial Institution',
+    link: '/portfolio/process-automation'
   },
   {
     id: 5,
-    title: 'Social Media Brand Building',
-    category: 'Social Media',
-    description: 'Comprehensive social media strategy that transformed brand awareness and engagement.',
-    image: '/images/portfolio/social.jpg',
+    title: 'Demand Forecasting System',
+    category: 'Predictive Analytics',
+    description: 'AI-powered demand forecasting and inventory optimization system.',
+    image: '/images/portfolio/forecasting.jpg',
     results: [
-      '450% increase in social engagement',
-      '289% growth in follower base',
-      '178% increase in social-driven sales'
+      '92% forecast accuracy',
+      '45% reduction in inventory costs',
+      '30% improvement in supply chain efficiency'
     ],
-    services: ['Social Media Strategy', 'Content Creation', 'Influencer Marketing'],
-    client: 'Lifestyle Brand',
-    link: '/portfolio/social-media'
+    services: ['Predictive Analytics', 'Time Series Analysis', 'Supply Chain Optimization'],
+    client: 'Retail Corporation',
+    link: '/portfolio/demand-forecasting'
   },
   {
     id: 6,
-    title: 'Content Marketing Success',
-    category: 'Content Marketing',
-    description: 'Strategic content marketing campaign that established thought leadership.',
-    image: '/images/portfolio/content.jpg',
+    title: 'Medical Image Analysis',
+    category: 'Computer Vision',
+    description: 'AI-powered medical imaging analysis system for early disease detection.',
+    image: '/images/portfolio/medical.jpg',
     results: [
-      '312% increase in organic traffic',
-      '189% more newsletter subscribers',
-      '145% improvement in lead quality'
+      '95% detection accuracy',
+      '75% faster diagnosis time',
+      '50% reduction in false positives'
     ],
-    services: ['Content Strategy', 'Blog Management', 'Email Marketing'],
-    client: 'Financial Services',
-    link: '/portfolio/content-marketing'
+    services: ['Medical Image Processing', 'Deep Learning', 'Healthcare AI'],
+    client: 'Healthcare Provider',
+    link: '/portfolio/medical-imaging'
   }
 ];
 
 const metrics = [
   {
     icon: BarChart2,
-    value: '500+',
-    label: 'Projects Completed'
+    value: '150+',
+    label: 'AI Solutions Deployed'
   },
   {
     icon: Users,
-    value: '200+',
-    label: 'Happy Clients'
+    value: '100+',
+    label: 'Enterprise Clients'
   },
   {
     icon: Globe,
-    value: '50+',
-    label: 'Countries Served'
+    value: '30+',
+    label: 'Industries Transformed'
   },
   {
     icon: Search,
-    value: '1000+',
-    label: 'Keywords Ranked'
+    value: '95%',
+    label: 'Model Accuracy'
   }
 ];
 
@@ -147,7 +147,7 @@ export default function PortfolioPage() {
               Our <span className="text-primary">Portfolio</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Explore our successful projects and see how we help businesses achieve their digital marketing goals through innovative strategies and measurable results.
+              Explore our successful AI implementations and see how we help businesses transform their operations through cutting-edge artificial intelligence solutions and measurable results.
             </p>
           </div>
         </div>
@@ -249,10 +249,10 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">
-              Ready to Achieve Similar Results?
+              Ready to Transform Your Business with AI?
             </h2>
             <p className="mt-6 text-lg text-black/80">
-              Let us help you reach your digital marketing goals with our proven strategies and expertise.
+              Let us help you harness the power of AI with our proven solutions and technical expertise.
             </p>
             <div className="mt-10">
               <Link
