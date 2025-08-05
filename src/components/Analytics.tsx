@@ -18,6 +18,16 @@ export default function Analytics() {
           gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
         `}
       </Script>
+
+      {/* Datafast Analytics */}
+      <Script
+        id="datafast-analytics"
+        defer
+        data-website-id="6892260b18e7269415249f11"
+        data-domain="digimint.ai"
+        src="https://datafa.st/js/script.js"
+        strategy="afterInteractive"
+      />
     </>
   );
 }
