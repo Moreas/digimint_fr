@@ -26,7 +26,6 @@ export default function GetStartedPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement form submission
     console.log('Form submitted:', formData);
   };
 
@@ -165,7 +164,7 @@ export default function GetStartedPage() {
                     </div>
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-black dark:text-white mb-2">
-                        Nom de l'Entreprise *
+                        Nom de l&apos;Entreprise *
                       </label>
                       <input
                         type="text"
@@ -179,7 +178,7 @@ export default function GetStartedPage() {
                     </div>
                     <div>
                       <label htmlFor="employees" className="block text-sm font-medium text-black dark:text-white mb-2">
-                        Nombre d'Employés
+                        Nombre d&apos;Employés
                       </label>
                       <select
                         id="employees"
@@ -198,7 +197,7 @@ export default function GetStartedPage() {
                   </div>
                   <div>
                     <label htmlFor="sector" className="block text-sm font-medium text-black dark:text-white mb-2">
-                      Secteur d'Activité
+                      Secteur d&apos;Activité
                     </label>
                     <select
                       id="sector"
@@ -240,7 +239,7 @@ export default function GetStartedPage() {
                   </div>
                   <div>
                     <label htmlFor="goals" className="block text-sm font-medium text-black dark:text-white mb-2">
-                      Quels objectifs souhaitez-vous atteindre avec l'IA ? *
+                      Quels objectifs souhaitez-vous atteindre avec l&apos;IA ? *
                     </label>
                     <textarea
                       id="goals"
@@ -271,7 +270,7 @@ export default function GetStartedPage() {
                       className="w-full px-4 py-2 rounded-md bg-white dark:bg-black border border-gray-300 dark:border-gray-700 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
                     >
                       <option value="">Sélectionnez</option>
-                      <option value="urgent">Urgent (< 1 mois)</option>
+                      <option value="urgent">Urgent (&lt; 1 mois)</option>
                       <option value="court">Court terme (1-3 mois)</option>
                       <option value="moyen">Moyen terme (3-6 mois)</option>
                       <option value="long">Long terme (6+ mois)</option>
