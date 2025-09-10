@@ -16,6 +16,17 @@ export const metadata = {
   description: 'Transformez votre entreprise avec nos solutions d\'intelligence artificielle : Relation Client IA, Cartographie des Processus IA, et Intelligence de Croissance IA.',
   metadataBase: new URL('https://digimint.fr'),
   keywords: ['IA', 'intelligence artificielle', 'PME', 'France', 'relation client', 'automatisation', 'croissance'],
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon.png',
+      type: 'image/png',
+    },
+    {
+      rel: 'apple-touch-icon',
+      url: '/apple-icon',
+    },
+  ],
   openGraph: {
     title: 'Digimint France - Solutions IA pour PME Françaises',
     description: 'Transformez votre entreprise avec nos solutions d\'intelligence artificielle adaptées aux PME françaises.',
