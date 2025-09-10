@@ -3,32 +3,77 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 31, 41, 55;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  --primary: #ffc04b;
+  --black: #000000;
+  --white: #ffffff;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  font-feature-settings: 'rlig' 1, 'calt' 1;
+  @apply antialiased;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.dark {
+  color-scheme: dark;
+}
+
+/* Light mode styles */
+body {
+  @apply bg-white text-black transition-colors;
+}
+
+/* Dark mode styles */
+body.dark {
+  @apply bg-black text-white;
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary text-black hover:bg-primary/90 transition-colors;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-black transition-colors;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-black rounded-xl shadow-lg p-6 transition-all;
+}
+
+/* Section styles */
+.section {
+  @apply py-16 md:py-24;
+}
+
+/* Container styles */
+.container-custom {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Font weights */
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 /* Smooth scrolling */
@@ -59,7 +104,7 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #ffc04b;
   outline-offset: 2px;
 }
 
@@ -94,27 +139,4 @@ textarea:focus-visible {
 
 .delay-1500 {
   animation-delay: 1.5s;
-}
-
-/* Floating animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Custom button styles */
-.btn-primary {
-  @apply bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
-}
-
-.btn-secondary {
-  @apply border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
 }
