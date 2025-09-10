@@ -15,9 +15,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: 'Digimint AI - AI-Powered Digital Marketing Agency',
-  description: 'Professional AI-powered digital marketing services including SEO, social media marketing, content creation, and web development.',
-  metadataBase: new URL('https://digimint.com'),
+  title: 'Digimint - Solutions IA pour PME Françaises',
+  description: 'Transformez votre entreprise avec nos solutions d\'intelligence artificielle : Relation Client IA, Cartographie des Processus IA, et Intelligence de Croissance IA.',
+  metadataBase: new URL('https://digimint.fr'),
+  keywords: ['IA', 'intelligence artificielle', 'PME', 'France', 'relation client', 'automatisation', 'croissance'],
+  openGraph: {
+    title: 'Digimint - Solutions IA pour PME Françaises',
+    description: 'Transformez votre entreprise avec nos solutions d\'intelligence artificielle adaptées aux PME françaises.',
+    locale: 'fr_FR',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
       <body className={`${montserrat.className} antialiased`}>
         <ThemeProvider>
           <div className="flex flex-col min-h-screen transition-colors duration-300">
