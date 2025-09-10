@@ -1,10 +1,4 @@
 import { Montserrat } from 'next/font/google';
-import { ThemeProvider } from '@/contexts/ThemeContext';
-import Analytics from '@/components/Analytics';
-import JsonLd from '@/components/JsonLd';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { generateOrganizationSchema } from './metadata';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -35,17 +29,11 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={`${montserrat.className} antialiased`}>
-        <ThemeProvider>
-          <div className="flex flex-col min-h-screen transition-colors duration-300">
-            <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </div>
-          <Analytics />
-          <JsonLd schema={generateOrganizationSchema()} />
-        </ThemeProvider>
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-grow">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
