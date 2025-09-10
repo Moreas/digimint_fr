@@ -1,217 +1,270 @@
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowUpRight, BarChart2, Users, Globe, Search } from 'lucide-react';
 
-export const metadata = {
-  title: 'Cas d\'usage - Digimint AI',
-  description: 'Découvrez nos réalisations et les résultats concrets obtenus par nos clients PME grâce à l\'intelligence artificielle.',
-};
+const categories = [
+  'Tous',
+  'Relation Client IA',
+  'Automatisation',
+  'Intelligence Marketing',
+  'Analyse Prédictive',
+  'Vision par Ordinateur'
+];
 
-export default function CasUsage() {
-  const casUsages = [
-    {
-      title: 'Service Client Optimisé',
-      sector: 'PME de services - Secteur conseil',
-      employees: '50 employés',
-      challenge: 'Temps de réponse client trop long, difficulté à suivre les échanges',
-      solution: 'Automatisation des réponses courantes et transcription automatique des appels',
-      results: [
-        { metric: '-30%', description: 'de temps de réponse client' },
-        { metric: '+45%', description: 'de satisfaction client' },
-        { metric: '24h/7j', description: 'disponibilité du service' }
-      ],
-      testimonial: "Grâce à Digimint AI, nous avons révolutionné notre service client. La transcription automatique nous fait gagner un temps précieux et nos clients apprécient la réactivité.",
-      author: 'Marie Dubois, Directrice Générale'
-    },
-    {
-      title: 'Croissance Marketing B2B',
-      sector: 'PME industrielle - Secteur manufacturier',
-      employees: '30 employés',
-      challenge: 'Difficultés à générer des leads qualifiés, visibilité web limitée',
-      solution: 'Optimisation SEO locale par IA et génération de contenu automatisée',
-      results: [
-        { metric: '+20%', description: 'de leads qualifiés' },
-        { metric: '+65%', description: 'de trafic web organique' },
-        { metric: '+35%', description: 'de conversions' }
-      ],
-      testimonial: "L'approche IA de Digimint nous a permis d'automatiser notre marketing tout en gardant une approche personnalisée. Les résultats sont au rendez-vous.",
-      author: 'Pierre Martin, Responsable Commercial'
-    },
-    {
-      title: 'Automatisation des Processus',
-      sector: 'PME e-commerce - Secteur textile',
-      employees: '25 employés',
-      challenge: 'Gestion manuelle des commandes, erreurs fréquentes, surcharge administrative',
-      solution: 'Cartographie et automatisation des flux internes, intégration ERP/CRM',
-      results: [
-        { metric: '-50%', description: 'd\'erreurs de traitement' },
-        { metric: '+40%', description: 'de productivité' },
-        { metric: '-25%', description: 'de coûts opérationnels' }
-      ],
-      testimonial: "Digimint AI a transformé notre façon de travailler. Nos processus sont maintenant fluides et nos équipes peuvent se concentrer sur la valeur ajoutée.",
-      author: 'Sophie Leroy, Directrice Opérationnelle'
-    }
-  ];
+const projects = [
+  {
+    id: 1,
+    title: 'Système CRM Intelligent PME',
+    category: 'Relation Client IA',
+    description: 'Solution IA avancée pour la gestion client avec enregistrement automatique des appels et suivi prédictif.',
+    image: '/images/portfolio/crm.jpg',
+    results: [
+      '70% de réduction du temps de traitement client',
+      '85% d\'amélioration de la satisfaction client',
+      '45% d\'augmentation des ventes'
+    ],
+    services: ['Enregistrement Automatique', 'Analyse Prédictive', 'Suivi Client IA'],
+    client: 'PME Services Conseil (50 employés)',
+    link: '/portfolio/crm-intelligent'
+  },
+  {
+    id: 2,
+    title: 'Automatisation Processus Industriels',
+    category: 'Automatisation',
+    description: 'Système d\'automatisation IA pour optimiser les flux de production et réduire les tâches répétitives.',
+    image: '/images/portfolio/automation.jpg',
+    results: [
+      '60% de réduction des tâches manuelles',
+      '95% de précision dans l\'automatisation',
+      '40% d\'économies opérationnelles'
+    ],
+    services: ['Automatisation Processus', 'Intégration ERP', 'Optimisation Flux'],
+    client: 'PME Industrielle Bretagne (30 employés)',
+    link: '/portfolio/automatisation-processus'
+  },
+  {
+    id: 3,
+    title: 'SEO Local Optimisé par IA',
+    category: 'Intelligence Marketing',
+    description: 'Solution IA pour l\'optimisation SEO locale et génération automatique de contenu marketing.',
+    image: '/images/portfolio/seo.jpg',
+    results: [
+      '150% d\'augmentation du trafic local',
+      '35% de leads qualifiés en plus',
+      '80% de gain de temps en création contenu'
+    ],
+    services: ['SEO Local IA', 'Génération Contenu', 'Analyse Concurrentielle'],
+    client: 'PME Commerce Lyon (15 employés)',
+    link: '/portfolio/seo-local'
+  },
+  {
+    id: 4,
+    title: 'Prévision Demande E-commerce',
+    category: 'Analyse Prédictive',
+    description: 'Système IA de prévision de la demande et optimisation des stocks pour e-commerce PME.',
+    image: '/images/portfolio/forecasting.jpg',
+    results: [
+      '90% de précision des prévisions',
+      '30% de réduction des stocks',
+      '25% d\'amélioration de la marge'
+    ],
+    services: ['Prévision Demande', 'Optimisation Stocks', 'Analytics Avancées'],
+    client: 'E-commerce PME Toulouse (20 employés)',
+    link: '/portfolio/prevision-demande'
+  },
+  {
+    id: 5,
+    title: 'Contrôle Qualité Automatisé',
+    category: 'Vision par Ordinateur',
+    description: 'Système de vision par ordinateur pour le contrôle qualité automatisé en production PME.',
+    image: '/images/portfolio/vision.jpg',
+    results: [
+      '99.5% de précision détection défauts',
+      '75% de réduction temps inspection',
+      '50% d\'économies en contrôle qualité'
+    ],
+    services: ['Vision par Ordinateur', 'Détection Défauts', 'Contrôle Automatisé'],
+    client: 'PME Manufacturière Normandie (40 employés)',
+    link: '/portfolio/controle-qualite'
+  },
+  {
+    id: 6,
+    title: 'Assistant IA Service Client',
+    category: 'Relation Client IA',
+    description: 'Chatbot IA avancé pour le support client automatisé avec analyse de sentiment.',
+    image: '/images/portfolio/chatbot.jpg',
+    results: [
+      '80% de réduction temps de réponse',
+      '90% de satisfaction client',
+      '60% d\'économies en support'
+    ],
+    services: ['Chatbot IA', 'Analyse Sentiment', 'Support Automatisé'],
+    client: 'PME Services Digitaux Paris (25 employés)',
+    link: '/portfolio/assistant-ia'
+  }
+];
+
+const metrics = [
+  {
+    icon: BarChart2,
+    value: '50+',
+    label: 'Solutions IA Déployées'
+  },
+  {
+    icon: Users,
+    value: '40+',
+    label: 'PME Clientes'
+  },
+  {
+    icon: Globe,
+    value: '15+',
+    label: 'Secteurs Transformés'
+  },
+  {
+    icon: Search,
+    value: '92%',
+    label: 'Précision Modèles'
+  }
+];
+
+export default function PortfolioPage() {
+  const [selectedCategory, setSelectedCategory] = useState('Tous');
+
+  const filteredProjects = selectedCategory === 'Tous'
+    ? projects
+    : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <div className="min-h-screen">
+    <div className="bg-white dark:bg-black min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative py-24 bg-white dark:bg-black">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Cas d'usage & Résultats clients
+            <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl">
+              Notre <span className="text-primary">Portfolio</span>
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Découvrez comment nos solutions IA ont transformé des PME françaises 
-              avec des résultats concrets et mesurables.
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Explorez nos implémentations IA réussies et découvrez comment nous aidons les PME françaises à transformer leurs opérations grâce à des solutions d'intelligence artificielle de pointe et des résultats mesurables.
             </p>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Cas d'usage détaillés */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-20">
-            {casUsages.map((cas, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="mb-6">
-                    <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
-                      {cas.sector}
+      {/* Metrics Section */}
+      <div className="bg-primary py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {metrics.map((metric, index) => {
+              const IconComponent = metric.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <IconComponent className="w-8 h-8 text-black" />
+                  </div>
+                  <div className="text-4xl font-bold text-black mb-2">
+                    {metric.value}
+                  </div>
+                  <div className="text-lg text-black/80">
+                    {metric.label}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Category Filter */}
+      <div className="py-12 bg-white dark:bg-black">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-colors duration-300
+                  ${selectedCategory === category
+                    ? 'bg-primary text-black'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/10'
+                  }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="py-12 bg-white dark:bg-black">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project) => (
+              <Link
+                href={project.link}
+                key={project.id}
+                className="group relative bg-white dark:bg-black/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="relative h-64">
+                  <div className="absolute inset-0 bg-black/60 z-10" />
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="inline-block bg-primary/90 text-black text-sm font-medium px-3 py-1 rounded-full">
+                      {project.category}
                     </span>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                      {cas.title}
-                    </h2>
-                    <p className="text-gray-600 font-medium">{cas.employees}</p>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Défi initial :</h3>
-                    <p className="text-gray-600">{cas.challenge}</p>
-                  </div>
-
-                  <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Solution mise en œuvre :</h3>
-                    <p className="text-gray-600">{cas.solution}</p>
-                  </div>
-
-                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                    <blockquote className="text-gray-700 italic mb-4">
-                      "{cas.testimonial}"
-                    </blockquote>
-                    <cite className="text-sm font-medium text-gray-900">
-                      — {cas.author}
-                    </cite>
                   </div>
                 </div>
-
-                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                  <div className="bg-white border-2 border-gray-100 rounded-xl p-8 shadow-lg">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
-                      Résultats obtenus
-                    </h3>
-                    <div className="space-y-6">
-                      {cas.results.map((result, idx) => (
-                        <div key={idx} className="text-center">
-                          <div className="text-3xl font-bold text-blue-600 mb-2">
-                            {result.metric}
-                          </div>
-                          <div className="text-gray-700 font-medium">
-                            {result.description}
-                          </div>
-                        </div>
-                      ))}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-black dark:text-white mb-3 group-hover:text-primary transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    {project.description}
+                  </p>
+                  <div className="space-y-2 mb-6">
+                    {project.results.map((result, index) => (
+                      <div key={index} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
+                        {result}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500 dark:text-gray-400">
+                      {project.client}
                     </div>
+                    <ArrowUpRight className="w-5 h-5 text-primary transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Secteurs d'activité */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Secteurs d'activité
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Nos solutions s'adaptent à tous les secteurs d'activité des PME françaises
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { name: 'Industrie', icon: '🏭' },
-              { name: 'Services', icon: '💼' },
-              { name: 'E-commerce', icon: '🛒' },
-              { name: 'Artisanat', icon: '🔨' },
-              { name: 'Conseil', icon: '📊' },
-              { name: 'Santé', icon: '🏥' },
-              { name: 'BTP', icon: '🏗️' },
-              { name: 'Restauration', icon: '🍽️' }
-            ].map((secteur, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-4xl mb-4">{secteur.icon}</div>
-                <h3 className="font-semibold text-gray-900">{secteur.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Métriques globales */}
-      <section className="py-20 bg-blue-600">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Nos résultats en chiffres
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { metric: '50+', description: 'PME accompagnées' },
-              { metric: '30%', description: 'Gain moyen de productivité' },
-              { metric: '25%', description: 'Réduction moyenne des coûts' },
-              { metric: '95%', description: 'Taux de satisfaction client' }
-            ].map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.metric}
-                </div>
-                <div className="text-blue-100">
-                  {stat.description}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Votre PME sera-t-elle la prochaine success story ?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Rejoignez les PME qui ont déjà transformé leur activité avec l'IA. 
-            Demandez votre audit gratuit dès maintenant.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
-          >
-            Demandez votre audit gratuit
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+      <div className="bg-primary">
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">
+              Prêt à Transformer Votre PME avec l'IA ?
+            </h2>
+            <p className="mt-6 text-lg text-black/80">
+              Laissez-nous vous aider à exploiter la puissance de l'IA avec nos solutions éprouvées et notre expertise technique.
+            </p>
+            <div className="mt-10">
+              <Link
+                href="/contact"
+                className="rounded-md bg-black px-8 py-4 text-lg font-semibold text-white shadow-sm hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                Démarrer Votre Projet
+              </Link>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

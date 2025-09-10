@@ -1,213 +1,145 @@
+import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { Metadata } from 'next';
+import { Globe, Code, Search, LineChart, Share2, FileText, PieChart, Target, MapPin } from 'lucide-react';
 
-export const metadata = {
-  title: 'Services IA - Digimint',
-  description: 'Découvrez nos solutions d\'intelligence artificielle pour PME : Relation Client IA, Cartographie des Processus IA, et Intelligence de Croissance IA.',
+export const metadata: Metadata = {
+  title: 'Nos Services - Digimint France Solutions IA',
+  description: 'Solutions IA complètes incluant machine learning, traitement du langage naturel, vision par ordinateur et plus. Transformez votre PME avec l\'innovation pilotée par l\'IA.',
 };
 
-export default function Services() {
-  const services = [
-    {
-      id: 'relation-client-ia',
-      title: 'Relation Client IA',
-      description: 'Automatisez et personnalisez vos interactions clients avec des solutions IA avancées.',
-      icon: '/images/content-icon.svg',
-      features: [
-        'Chatbots intelligents multilingues',
-        'Analyse de sentiment en temps réel',
-        'Personnalisation automatique des réponses',
-        'Intégration CRM complète',
-        'Tableau de bord analytique'
-      ],
-      benefits: [
-        'Réduction de 70% du temps de réponse',
-        'Amélioration de 85% de la satisfaction client',
-        'Disponibilité 24h/24, 7j/7',
-        'Réduction des coûts de support de 50%'
-      ]
-    },
-    {
-      id: 'cartographie-processus-ia',
-      title: 'Cartographie des Processus IA',
-      description: 'Analysez et optimisez vos processus métier avec l\'intelligence artificielle.',
-      icon: '/images/search-icon.svg',
-      features: [
-        'Analyse automatique des workflows',
-        'Identification des goulots d\'étranglement',
-        'Recommandations d\'optimisation',
-        'Modélisation prédictive',
-        'Rapports détaillés'
-      ],
-      benefits: [
-        'Gain d\'efficacité de 40%',
-        'Réduction des erreurs de 60%',
-        'Optimisation des ressources',
-        'Amélioration de la productivité'
-      ]
-    },
-    {
-      id: 'intelligence-croissance-ia',
-      title: 'Intelligence de Croissance IA',
-      description: 'Exploitez vos données pour prendre des décisions stratégiques éclairées.',
-      icon: '/images/digital-strategy.svg',
-      features: [
-        'Analyse prédictive des ventes',
-        'Segmentation client avancée',
-        'Détection d\'opportunités de marché',
-        'Optimisation des prix dynamique',
-        'Tableaux de bord exécutifs'
-      ],
-      benefits: [
-        'Augmentation du CA de 25%',
-        'Amélioration de la marge de 15%',
-        'Réduction du churn de 30%',
-        'Accélération de la prise de décision'
-      ]
-    }
-  ];
+const services = [
+  {
+    icon: Code,
+    title: 'Relation Client IA',
+    description: 'Solutions IA personnalisées pour optimiser vos interactions clients. Enregistrement automatique des appels, résumés intelligents et suivi commercial prédictif.',
+    slug: 'relation-client-ia'
+  },
+  {
+    icon: Search,
+    title: 'SEO Optimisé par IA',
+    description: 'Optimisation avancée des moteurs de recherche utilisant l\'IA pour l\'analyse de contenu, la recherche de mots-clés et l\'intelligence concurrentielle locale.',
+    slug: 'seo-ia'
+  },
+  {
+    icon: LineChart,
+    title: 'Analyse Prédictive',
+    description: 'Analyse de données pilotée par l\'IA et prévisions pour l\'intelligence d\'affaires. Transformez vos données en insights actionnables et avantages stratégiques.',
+    slug: 'analyse-predictive'
+  },
+  {
+    icon: Share2,
+    title: 'Génération de Contenu IA',
+    description: 'Création de contenu avancée utilisant des modèles d\'IA. Générez du contenu engageant pour blogs, réseaux sociaux et marketing à grande échelle.',
+    slug: 'generation-contenu-ia'
+  },
+  {
+    icon: FileText,
+    title: 'Traitement du Langage Naturel',
+    description: 'Exploitez la technologie NLP pour le service client automatisé, l\'analyse de sentiment et les solutions de traitement de texte.',
+    slug: 'nlp-services'
+  },
+  {
+    icon: Globe,
+    title: 'Automatisation IA',
+    description: 'Rationalisez vos processus métier avec l\'automatisation IA. De l\'optimisation des flux de travail à la gestion intelligente des tâches.',
+    slug: 'automatisation-ia'
+  },
+  {
+    icon: PieChart,
+    title: 'Solutions Machine Learning',
+    description: 'Modèles de machine learning personnalisés pour la prédiction, classification et reconnaissance de motifs. Transformez vos données en avantages concurrentiels.',
+    slug: 'machine-learning'
+  },
+  {
+    icon: Target,
+    title: 'Conseil en Stratégie IA',
+    description: 'Conseils d\'experts sur l\'implémentation de l\'IA et la transformation digitale. Développez une feuille de route pour intégrer l\'IA dans vos opérations.',
+    slug: 'strategie-ia'
+  },
+  {
+    icon: MapPin,
+    title: 'Vision par Ordinateur',
+    description: 'Solutions avancées de traitement d\'images et vidéos. De la détection d\'objets à la recherche visuelle et au contrôle qualité automatisé.',
+    slug: 'vision-ordinateur'
+  },
+];
 
+export default function ServicesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="bg-white dark:bg-black min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Nos Solutions IA
-            </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Des solutions d'intelligence artificielle sur mesure pour transformer 
-              votre PME et accélérer votre croissance.
-            </p>
-          </div>
+      <section className="relative py-20 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl mb-6">
+            Nos Services IA
+          </h1>
+          <p className="text-lg leading-8 text-gray-800 dark:text-gray-200 max-w-3xl mx-auto">
+            Solutions IA de pointe adaptées pour transformer les opérations de votre PME.
+            Nous combinons algorithmes avancés, science des données et innovation pour livrer des résultats puissants.
+          </p>
         </div>
       </section>
 
-      {/* Services Details */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-20">
-            {services.map((service, index) => (
-              <div key={service.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                    <Image
-                      src={service.icon}
-                      alt={service.title}
-                      width={32}
-                      height={32}
-                    />
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    {service.title}
-                  </h2>
-                  <p className="text-xl text-gray-600 mb-8">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Fonctionnalités clés :</h3>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <svg className="w-5 h-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+      {/* Section Divider */}
+      <div className="w-full h-px bg-primary" />
 
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
-                  >
-                    Demander un devis
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
-                </div>
-
-                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                  <div className="bg-gray-50 rounded-xl p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-6">Bénéfices mesurables :</h3>
-                    <div className="space-y-4">
-                      {service.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-center">
-                          <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                            <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                          </div>
-                          <span className="text-gray-700 font-medium">{benefit}</span>
-                        </div>
-                      ))}
+      {/* Services Grid */}
+      <section className="py-16 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <Link
+                  key={index}
+                  href={`/services/${service.slug}`}
+                  className="group"
+                >
+                  <div className="bg-[#F2F2F2] dark:bg-[#0D0D0D] rounded-lg p-8 text-black dark:text-white transition-all duration-300 border-3 border-black dark:border-white/10 h-full hover:transform hover:scale-[1.02]">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-6 h-6 text-black" strokeWidth={1.5} />
                     </div>
+                    <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {service.description}
+                    </p>
                   </div>
-                </div>
-              </div>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Notre Processus
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Une approche structurée pour garantir le succès de votre transformation IA
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: '01', title: 'Analyse', description: 'Audit complet de vos processus et besoins' },
-              { step: '02', title: 'Conception', description: 'Développement de la solution sur mesure' },
-              { step: '03', title: 'Déploiement', description: 'Mise en œuvre et formation de vos équipes' },
-              { step: '04', title: 'Optimisation', description: 'Suivi continu et amélioration des performances' }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Section Divider */}
+      <div className="w-full h-px bg-primary" />
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Prêt à démarrer votre transformation IA ?
+      <section className="py-16 px-6 lg:px-8 bg-[#0D0D0D]">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
+            Prêt à Transformer Votre PME avec l'IA ?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Contactez nos experts pour une consultation gratuite et découvrez 
-            comment l'IA peut transformer votre entreprise.
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contactez-nous pour une consultation gratuite et découvrez comment notre expertise IA
+            peut révolutionner vos opérations commerciales et stimuler l'innovation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+          <div className="flex justify-center gap-4">
+            <a
               href="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
+              className="rounded-md bg-primary px-6 py-3 text-base font-semibold text-black shadow-sm hover:bg-primary/90 transition-colors duration-300"
             >
-              Consultation gratuite
-            </Link>
-            <Link
+              Commencer
+            </a>
+            <a
               href="/portfolio"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
+              className="rounded-md bg-black px-6 py-3 text-base font-semibold text-white border border-gray-700 hover:bg-black/80 transition-colors duration-300"
             >
-              Voir nos réalisations
-            </Link>
+              Voir Nos Réalisations
+            </a>
           </div>
         </div>
       </section>
