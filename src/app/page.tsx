@@ -5,30 +5,74 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Boostez votre PME avec l'IA
-              <span className="block text-blue-300">en toute conformité</span>
+      <section className="relative min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-50 to-white"></div>
+        
+        {/* Floating Light Effects */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-orange-200/30 to-yellow-200/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-gray-200/40 to-gray-300/40 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
+              <span className="text-orange-500">Advanced</span> Artificial Intelligence
+              <span className="block text-gray-800">Solutions</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Solutions d'intelligence artificielle concrètes et sur-mesure pour PME françaises. 
-              Hébergement européen, conformité CNIL/RGPD garantie.
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Transformez votre entreprise avec nos solutions d'intelligence artificielle de pointe. 
+              Nos technologies avancées et notre expertise vous aident à innover et à garder une longueur d'avance sur la concurrence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+            {/* Laptop Image Container */}
+            <div className="relative mx-auto max-w-4xl mb-8">
+              <div className="relative">
+                {/* Laptop mockup */}
+                <div className="relative mx-auto w-full max-w-3xl">
+                  <div className="relative bg-gray-800 rounded-t-xl p-2 shadow-2xl">
+                    <div className="bg-gray-900 rounded-lg aspect-video relative overflow-hidden">
+                      {/* Screen content with flowing lines effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900">
+                        {/* Animated flowing lines */}
+                        <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 800 600">
+                          <defs>
+                            <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="rgba(255,255,255,0.1)" />
+                              <stop offset="50%" stopColor="rgba(255,255,255,0.3)" />
+                              <stop offset="100%" stopColor="rgba(255,255,255,0.1)" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M0,300 Q200,200 400,300 T800,300" stroke="url(#flowGradient)" strokeWidth="2" fill="none" className="animate-pulse" />
+                          <path d="M0,250 Q150,150 300,250 T600,250" stroke="url(#flowGradient)" strokeWidth="1.5" fill="none" className="animate-pulse delay-500" />
+                          <path d="M200,350 Q400,250 600,350 T1000,350" stroke="url(#flowGradient)" strokeWidth="1.5" fill="none" className="animate-pulse delay-1000" />
+                        </svg>
+                      </div>
+                      {/* Glowing dots */}
+                      <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-white rounded-full animate-ping"></div>
+                      <div className="absolute top-2/3 right-1/3 w-1.5 h-1.5 bg-orange-400 rounded-full animate-ping delay-700"></div>
+                      <div className="absolute bottom-1/4 left-1/2 w-1 h-1 bg-gray-300 rounded-full animate-ping delay-1500"></div>
+                    </div>
+                  </div>
+                  {/* Laptop base */}
+                  <div className="bg-gray-700 h-4 rounded-b-xl shadow-lg"></div>
+                </div>
+                
+                {/* Floating light effects around laptop */}
+                <div className="absolute -top-10 -left-10 w-32 h-32 bg-gradient-to-r from-orange-300/20 to-yellow-300/20 rounded-full blur-2xl animate-pulse"></div>
+                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-gradient-to-r from-gray-300/20 to-white/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+                <div className="absolute top-1/2 -right-20 w-24 h-24 bg-gradient-to-r from-orange-200/30 to-orange-300/30 rounded-full blur-xl animate-pulse delay-500"></div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col items-center">
               <Link
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
+                className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl mb-4"
               >
-                Demandez une démo gratuite
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
-              >
-                Découvrir nos services
+                Voir Services
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
               </Link>
             </div>
           </div>
@@ -50,7 +94,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Service 1 */}
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                 <Image
                   src="/images/content-icon.svg"
                   alt="Relation Client avec l'IA"
@@ -66,7 +110,7 @@ export default function Home() {
               </ul>
               <Link
                 href="/services"
-                className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
               >
                 En savoir plus →
               </Link>
@@ -90,7 +134,7 @@ export default function Home() {
               </ul>
               <Link
                 href="/services"
-                className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
               >
                 En savoir plus →
               </Link>
@@ -114,7 +158,7 @@ export default function Home() {
               </ul>
               <Link
                 href="/services"
-                className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
               >
                 En savoir plus →
               </Link>
@@ -133,7 +177,7 @@ export default function Home() {
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -144,7 +188,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -155,7 +199,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -166,7 +210,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -231,7 +275,7 @@ export default function Home() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
@@ -241,7 +285,7 @@ export default function Home() {
                 PME industrielle (30 employés) - Secteur manufacturier
               </p>
               <div className="bg-blue-50 rounded-lg p-4 mb-4">
-                <p className="text-2xl font-bold text-blue-600 mb-2">+20%</p>
+                <p className="text-2xl font-bold text-orange-600 mb-2">+20%</p>
                 <p className="text-gray-700">de leads qualifiés</p>
               </div>
               <p className="text-gray-600">
@@ -293,12 +337,12 @@ export default function Home() {
               }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 mb-2">{item.description}</p>
-                <p className="text-sm text-blue-600 font-medium">{item.duration}</p>
+                <p className="text-sm text-orange-600 font-medium">{item.duration}</p>
               </div>
             ))}
           </div>
@@ -306,7 +350,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-orange-600">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Parlons de votre projet
@@ -317,7 +361,7 @@ export default function Home() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
+            className="inline-flex items-center bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
           >
             Demandez une démo gratuite
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

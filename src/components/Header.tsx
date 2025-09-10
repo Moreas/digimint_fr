@@ -37,14 +37,14 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                className="text-gray-700 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors duration-200"
+              className="bg-orange-500 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors duration-200"
             >
               Demandez une démo
             </Link>
@@ -54,7 +54,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-gray-700 hover:text-blue-600"
+              className="text-gray-700 hover:text-orange-600"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Ouvrir le menu</span>
@@ -83,7 +83,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium"
+                  className="block px-3 py-2 text-gray-700 hover:text-orange-600 text-sm font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -91,7 +91,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="block mx-3 mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 text-center"
+                className="block mx-3 mt-4 bg-orange-500 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-orange-600 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Demandez une démo
