@@ -1,13 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Metadata } from 'next';
 import { CheckCircle, ArrowRight, Users, Clock, Target } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Commencer - Digimint France Solutions IA',
-  description: 'Démarrez votre transformation IA avec Digimint France. Consultation gratuite, audit express et solutions personnalisées pour votre PME.',
-};
 
 export default function GetStartedPage() {
   const [step, setStep] = useState(1);
