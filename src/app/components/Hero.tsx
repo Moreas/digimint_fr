@@ -77,7 +77,7 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[90vh] bg-white dark:bg-black overflow-hidden flex flex-col">
+      <section className="relative h-[90vh] bg-white dark:bg-black overflow-hidden flex flex-col pt-24">
         {/* Background Image Container */}
         <div className="absolute inset-0">
           {/* Dark theme background */}

@@ -140,7 +140,7 @@ export default function PortfolioPage() {
   return (
     <div className="bg-white dark:bg-black min-h-screen">
       {/* Hero Section */}
-      <div className="relative py-24 bg-white dark:bg-black">
+      <div className="relative py-24 bg-white dark:bg-black pt-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl">

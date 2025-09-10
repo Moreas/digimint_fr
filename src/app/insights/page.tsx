@@ -98,7 +98,7 @@ export default function InsightsPage() {
   return (
     <div className="bg-white dark:bg-black min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-6 lg:px-8">
+      <section className="relative py-20 px-6 lg:px-8 pt-32">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl mb-6">
             Insights Technologie IA
